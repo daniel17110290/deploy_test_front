@@ -141,7 +141,7 @@ export default function Home() {
                       type="button"
                       class="btn btn-primary btn-sm"
                     >
-                      <span class="material-symbols-outlined"></span>
+                      <span class="material-symbols-outlined">delete</span>
                     </button>
                   </td>
                 </tr>
