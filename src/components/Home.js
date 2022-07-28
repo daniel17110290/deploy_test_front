@@ -58,8 +58,10 @@ export default function Home() {
   }
 
   function handleSubmit(e) {
+    e.preventDefault();
     dispatch(createText(input));
     alert("text created succesful");
+    dispatch(getText());
     setInput({
       text: "",
     });
