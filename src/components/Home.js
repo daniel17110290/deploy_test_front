@@ -21,7 +21,7 @@ export default function Home() {
   const allText = useSelector((state) => state.text);
   console.log(allText, "estos son los textos");
 
-  const { id } = useParams();
+  //const { id } = useParams();
 
   useEffect(() => {
     dispatch(getText());
@@ -141,7 +141,7 @@ export default function Home() {
                       type="button"
                       class="btn btn-primary btn-sm"
                     >
-                      X
+                      <span class="material-symbols-outlined"></span>
                     </button>
                   </td>
                 </tr>
