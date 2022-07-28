@@ -4,11 +4,15 @@ import URL_SET_DELETE_TEXT from "../constants";
 
 export function getText() {
   return async function (dispatch) {
-    var text = await axios.get(`https://test-app-daniel.herokuapp.com`);
-    return dispatch({
-      type: "GET_TEXT",
-      payload: text.data,
-    });
+    try {
+      var text = await axios.get(`https://test-app-daniel.herokuapp.com/iecho`);
+      return dispatch({
+        type: "GET_TEXT",
+        payload: text.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 }
 
@@ -16,7 +20,7 @@ export function createText(payload) {
   return async function (dispatch) {
     try {
       const createText = await axios.post(
-        ` https://test-app-daniel.herokuapp.com`,
+        ` https://test-app-daniel.herokuapp.com/iecho`,
         payload
       );
       return createText;
