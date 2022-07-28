@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import URL_SET_DELETE_TEXT from "../constants";
+import { URL_SET_DELETE_TEXT } from "../constants";
 
 export function getText() {
   return async function (dispatch) {
